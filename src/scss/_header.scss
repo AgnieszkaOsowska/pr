@@ -1,0 +1,59 @@
+.head{
+    height: $base-unit * 40.625;
+    background-image: url("/img/head_foto.jpg");
+    background-repeat: no-repeat;
+    position: relative;
+
+    &:before {
+        content: "";
+        position: absolute;
+        z-index: 2;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background: 
+        repeating-linear-gradient(140deg, #000 2px, transparent 50px);
+        //linear-gradient(to right, transparent 1px, black 1px, black 2px, transparent 2px);
+        background-size: 100%;
+    }
+
+   /*&:before {
+        content: "";
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background: 
+        linear-gradient(140deg, #10181e 15%, #2e9d16 65%, #eaae13; 
+        //linear-gradient(to right, transparent 1px, black 1px, black 2px, transparent 2px);
+        opacity: 0.8;
+        background-size: 100%;
+    }*/
+    @media (min-width: 1365px){
+        background-size: 100% 100%;
+    }
+
+    &__cont{
+        width: 90%;
+        margin: 0 auto;
+
+        &__h1{
+            position: absolute;
+            z-index: 100;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .h1{
+            color: white;
+        }
+
+        .h1--col{
+            color: $color-4;
+        }
+    }
+}
